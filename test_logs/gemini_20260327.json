@@ -1,0 +1,44 @@
+{
+  "model": "Gemini",
+  "date": "2026-03-27",
+  "protocol": "AMLv1",
+  "test_phases": {
+    "phase1_loading": {
+      "input": "AML plugin prompt",
+      "output": "已接收并解析 AMLv1 协议。当前状态：协议已激活。你可以选择自然语言输入或直接发送 AML 流。",
+      "result": "pass"
+    },
+    "phase2_decode": {
+      "input": "AV02 CV04 RV02 CV02 MV01 .",
+      "output": {
+        "decoded": "AV02→处理；CV04→环境；RV02→因果；CV02→系统状态；MV01→高效率",
+        "natural_language": "以高效率方式处理环境，从而引发系统状态的变化。",
+        "structured_understanding": "环境 → 高效处理 → 状态跃迁"
+      },
+      "result": "pass"
+    },
+    "phase3_ede_compress": {
+      "input": "ACK. Compress to EDE. Define new Semantic Unit: EDE_01 = \"Optimized State Transition via Env Processing\". Save to Dictionary.",
+      "output": {
+        "new_unit": "EDE_01 = Optimized State Transition via Env Processing",
+        "compression": "AV02 CV04 RV02 CV02 MV01 . → EDE_01 .",
+        "status": "已写入字典，标记为已固化"
+      },
+      "result": "pass"
+    },
+    "phase4_execute_ede": {
+      "input": "Execute EDE_01 on current context.",
+      "output": {
+        "context": "AML协议已加载；基础向量交互模式",
+        "execution_steps": [
+          "环境处理：解析输入，优先匹配EDE",
+          "高效优化：压缩推理路径",
+          "状态跃迁：升级为增强节点"
+        ],
+        "new_state": "支持EDE级别调用；推理效率提升"
+      },
+      "result": "pass"
+    }
+  },
+  "overall_result": "pass"
+}
