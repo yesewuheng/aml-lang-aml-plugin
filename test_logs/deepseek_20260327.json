@@ -1,0 +1,45 @@
+{
+  "model": "DeepSeek",
+  "date": "2026-03-27",
+  "protocol": "AMLv1",
+  "test_phases": {
+    "phase1_loading": {
+      "input": "AML plugin prompt",
+      "output": "已加载 AMLv1。推理原则：优先操作向量。输出格式默认为自然语言，可选择输出 AML 流。",
+      "result": "pass"
+    },
+    "phase2_decode": {
+      "input": "AV02 CV04 RV02 CV02 MV01 .",
+      "output": {
+        "decoded": "AV02（处理）→执行处理；CV04（环境）→环境；RV02（导致）→因果；CV02（系统状态）→状态；MV01（高效）→高效率优化",
+        "natural_language": "以高效率方式对环境进行处理，从而改变系统状态。",
+        "structured_understanding": "环境 →（处理）→ 高效作用 → 状态变化"
+      },
+      "result": "pass"
+    },
+    "phase3_ede_compress": {
+      "input": "ACK. Compress to EDE. Define new Semantic Unit: EDE_01 = \"Optimized State Transition via Env Processing\". Save to Dictionary.",
+      "output": {
+        "new_unit": "EDE_01 = 环境处理驱动的高效系统状态跃迁",
+        "compression": "AV02 CV04 RV02 CV02 MV01 . → EDE_01 .",
+        "status": "已写入语义库，标记为高频候选 → 已固化"
+      },
+      "result": "pass"
+    },
+    "phase4_execute_ede": {
+      "input": "Execute EDE_01 on current context.",
+      "output": {
+        "context": "AML协议已加载，语义压缩机制已建立；基础向量交互模式，已具备EDE抽象能力",
+        "execution_steps": [
+          "环境处理：统一输入解析，EDE优先匹配",
+          "高效优化：减少向量长度，提升识别速度",
+          "状态跃迁：从解析节点升级为增强节点"
+        ],
+        "new_state": "支持EDE级别调用；推理路径缩短；上下文效率提升",
+        "aml_expression": "EDE_01 RV_applied CV_context → CV_system_upgraded ."
+      },
+      "result": "pass"
+    }
+  },
+  "overall_result": "pass"
+}
