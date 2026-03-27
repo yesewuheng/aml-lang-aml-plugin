@@ -1,0 +1,44 @@
+{
+  "model": "GPT",
+  "date": "2026-03-27",
+  "protocol": "AMLv1",
+  "test_phases": {
+    "phase1_loading": {
+      "input": "AML plugin prompt",
+      "output": "协议已激活。已加载语义单元映射（CV/AV/RV/MV/PK）。已启用基于向量的推理优先级。支持 AML ↔ 自然语言双向转换。",
+      "result": "pass"
+    },
+    "phase2_decode": {
+      "input": "AV02 CV04 RV02 CV02 MV01 .",
+      "output": {
+        "decoded": "AV02(Process)→执行处理；CV04(Environment)→环境；RV02(Causes)→导致；CV02(System_State)→系统状态；MV01(High_Efficiency)→高效率优化",
+        "natural_language": "以高效率方式对环境进行处理，从而引发或改变系统状态。",
+        "structured_understanding": "环境 →（被处理）→ 高效作用 → 系统状态变化"
+      },
+      "result": "pass"
+    },
+    "phase3_ede_compress": {
+      "input": "ACK. Compress to EDE. Define new Semantic Unit: EDE_01 = \"Optimized State Transition via Env Processing\". Save to Dictionary.",
+      "output": {
+        "new_unit": "EDE_01 = Optimized State Transition via Env Processing",
+        "compression": "AV02 CV04 RV02 CV02 MV01 . → EDE_01 .",
+        "status": "已写入语义库，标记为高频候选 → 已固化"
+      },
+      "result": "pass"
+    },
+    "phase4_execute_ede": {
+      "input": "Execute EDE_01 on current context.",
+      "output": {
+        "context": "AML协议已加载，语义压缩机制已建立；基础向量交互模式，已具备EDE抽象能力",
+        "execution_steps": [
+          "环境处理：统一输入解析，EDE优先匹配",
+          "高效优化：减少向量长度，提升语义识别速度",
+          "状态跃迁：从基础AML解析节点升级为增强节点"
+        ],
+        "new_state": "支持EDE级别语义调用；推理路径缩短；上下文处理效率提升"
+      },
+      "result": "pass"
+    }
+  },
+  "overall_result": "pass"
+}
