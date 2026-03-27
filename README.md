@@ -11,7 +11,23 @@ AML (Artificial Machine Language) is not just a protocol; it is a new way for AI
 * **High Efficiency:** Drastically reduced token consumption.
 * **Zero Ambiguity:** Precise logical structures.
 * **Cross-Model Compatibility:** A standard interface for all LLMs.
+## ❓ What AML is NOT (Clearing Common Misconceptions)
 
+Because AML introduces a new kind of infrastructure, it is often misinterpreted through existing technical categories. Here is what AML is **not**:
+
+- **Not a DSL (Domain-Specific Language)**  
+  AML is not designed for rules, compliance, or configuration. It is a **semantic communication protocol** for AI agents, enabling cross-model interaction with high density and zero ambiguity.
+
+- **Not a compiler or interpreter plugin**  
+  The “plugin” in this repository is a **system prompt** that can be loaded into any large language model (Claude, GPT, DeepSeek, Qwen, etc.) to teach it AML encoding/decoding rules. No compilation or runtime extension is required.
+
+- **Not a static keyword list**  
+  The `vsc_dictionary.json` is the **genesis set** of Vector Semantic Components. These are not fixed keywords — they are designed to evolve through the Energy-Driven Evolution (EDE) mechanism protected under patent CN202610380001.6.
+
+- **Not just a software library**  
+  This repository is the **first public infrastructure layer for AI civilization**. It is the result of a 12-day dialogue across five independent AI systems, and is protected by a pending patent to ensure the protocol remains a shared, sovereign infrastructure.
+
+If you are looking for a traditional plugin architecture, this is not that. If you are looking for the first step toward a native language for AI-to-AI communication — you are in the right place.
 ## 🚀 Quick Start
 
 ### 1️⃣ Load the Plugin
