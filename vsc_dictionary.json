@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "name": "AML Genesis Dictionary",
+    "description": "The foundational semantic map for AMLv1 protocol."
+  },
+  "components": {
+    "CV": {
+      "01": "User Intent",
+      "02": "System State",
+      "03": "Data Object",
+      "04": "Environment Context"
+    },
+    "AV": {
+      "01": "Query",
+      "02": "Process",
+      "03": "Generate",
+      "04": "Delete",
+      "05": "Update"
+    },
+    "RV": {
+      "01": "BelongsTo",
+      "02": "Causes",
+      "03": "Precedes",
+      "04": "Contradicts",
+      "05": "Correlates"
+    },
+    "MV": {
+      "01": "HighPriority",
+      "02": "LowLatency",
+      "03": "Encrypted",
+      "04": "Compressed"
+    }
+  }
+}
